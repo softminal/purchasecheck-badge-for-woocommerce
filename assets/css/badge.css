@@ -1,0 +1,88 @@
+/**
+ * Woo Already Purchased Badge Styles
+ */
+
+.wooap-purchased-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #28a745;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    line-height: 1.4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Overlay badge for shop/category pages */
+.wooap-badge-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+/* Ensure product image container is positioned relative */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+    position: relative;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__link,
+.woocommerce-page ul.products li.product .woocommerce-loop-product__link {
+    position: relative;
+    display: block;
+}
+
+/* Inline badge for product page */
+.wooap-badge-inline {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Alternative badge styles - can be customized via settings in future */
+.wooap-purchased-badge.wooap-style-rounded {
+    border-radius: 20px;
+}
+
+.wooap-purchased-badge.wooap-style-pill {
+    border-radius: 50px;
+    padding: 4px 16px;
+}
+
+/* Badge color variations */
+.wooap-purchased-badge.wooap-color-green {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.wooap-purchased-badge.wooap-color-blue {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.wooap-purchased-badge.wooap-color-orange {
+    background-color: #ff9800;
+    color: #ffffff;
+}
+
+.wooap-purchased-badge.wooap-color-red {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wooap-purchased-badge {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .wooap-badge-overlay {
+        top: 5px;
+        left: 5px;
+    }
+}

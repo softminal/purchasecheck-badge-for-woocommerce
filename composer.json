@@ -1,0 +1,19 @@
+{
+    "name": "softminal/woo-already-purchased",
+    "description": "A plugin that adds a custom field to the product page to check if the customer has already purchased the product.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Softminal",
+            "email": "support@softminal.com",
+            "homepage": "https://softminal.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "WooAlreadyPurchased\\": "includes/"
+        }
+    },
+    "require": {}
+}
