@@ -8,8 +8,10 @@ if (!defined('ABSPATH')) {
 
 use WooAlreadyPurchased\Includes\Enqueue;
 use WooAlreadyPurchased\Includes\Menu;
-use WooAlreadyPurchased\Includes\Hooks;
-use WooAlreadyPurchased\Includes\Settings;
+use WooAlreadyPurchased\Includes\Settings\SettingsManager;
+use WooAlreadyPurchased\Includes\Badges\ShopBadge;
+use WooAlreadyPurchased\Includes\Badges\ProductBadge;
+use WooAlreadyPurchased\Includes\Badges\CartBadge;
 use Exception;
 
 /**
@@ -23,8 +25,10 @@ class App
     private static ?self $instance = null;
     private Enqueue $enqueue;
     private Menu $menu;
-    private Hooks $hooks;
-    private Settings $settings;
+    private SettingsManager $settings;
+    private ShopBadge $shop_badge;
+    private ProductBadge $product_badge;
+    private CartBadge $cart_badge;
 
     /**
      * Get the singleton instance
@@ -59,11 +63,25 @@ class App
     function loadDependencies(): void
     {
         $requiredFiles = [
+            // Services
             'includes/Services/PurchaseChecker.php',
+            
+            // Core
             'includes/Enqueue.php',
             'includes/Menu.php',
-            'includes/Hooks.php',
-            'includes/Settings.php',
+            
+            // Settings
+            'includes/Settings/SettingsManager.php',
+            'includes/Settings/GeneralSettings.php',
+            'includes/Settings/ShopPageSettings.php',
+            'includes/Settings/ProductPageSettings.php',
+            'includes/Settings/CartSettings.php',
+            
+            // Badges
+            'includes/Badges/BaseBadge.php',
+            'includes/Badges/ShopBadge.php',
+            'includes/Badges/ProductBadge.php',
+            'includes/Badges/CartBadge.php',
         ];
 
         foreach ($requiredFiles as $file) {
@@ -82,8 +100,10 @@ class App
     {
         $this->enqueue = new Enqueue();
         $this->menu = new Menu();
-        $this->hooks = new Hooks();
-        $this->settings = new Settings();
+        $this->settings = new SettingsManager();
+        $this->shop_badge = new ShopBadge();
+        $this->product_badge = new ProductBadge();
+        $this->cart_badge = new CartBadge();
     }
 
     /**
@@ -98,13 +118,50 @@ class App
         }
 
         try {
+            // Core initialization
             $this->enqueue->init();
             $this->menu->init();
-            $this->hooks->init();
             $this->settings->init();
+            
+            // Badge initialization (frontend only)
+            if (!is_admin()) {
+                $this->shop_badge->init();
+                $this->product_badge->init();
+                $this->cart_badge->init();
+            }
+            
+            // Register cache clearing hooks
+            $this->registerCacheClearingHooks();
         } catch (Exception $e) {
             error_log('Woo Already Purchased Plugin Error: ' . $e->getMessage());
             throw $e;
+        }
+    }
+
+    /**
+     * Register cache clearing hooks
+     */
+    private function registerCacheClearingHooks(): void
+    {
+        add_action('woocommerce_order_status_changed', [$this, 'clearUserPurchaseCache'], 10, 3);
+        add_action('woocommerce_new_order', [$this, 'clearUserPurchaseCache'], 10);
+    }
+
+    /**
+     * Clear user purchase cache when order status changes
+     * 
+     * @param int $order_id
+     */
+    public function clearUserPurchaseCache($order_id): void
+    {
+        $order = wc_get_order($order_id);
+        if (!$order) {
+            return;
+        }
+
+        $customer_id = $order->get_customer_id();
+        if ($customer_id) {
+            Services\PurchaseChecker::clearCache($customer_id);
         }
     }
 }

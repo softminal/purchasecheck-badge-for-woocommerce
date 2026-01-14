@@ -2,8 +2,10 @@
  * Woo Already Purchased Badge Styles
  */
 
+/* Base badge styles */
 .wooap-purchased-badge {
     display: inline-block;
+    width: fit-content;
     padding: 6px 12px;
     background-color: #28a745;
     color: #ffffff;
@@ -13,47 +15,228 @@
     letter-spacing: 0.5px;
     border-radius: 3px;
     line-height: 1.4;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
+
+/* ==========================================================================
+   SHOP PAGE BADGE STYLES
+   ========================================================================== */
 
 /* Overlay badge for shop/category pages */
 .wooap-badge-overlay {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 10;
+    z-index: 999;
+    pointer-events: none;
 }
 
-/* Ensure product image container is positioned relative */
+/* Shop page badge positions */
+.wooap-badge-overlay.wooap-position-topleft {
+    top: 10px;
+    left: 10px;
+    right: auto;
+    bottom: auto;
+    transform: none;
+}
+
+.wooap-badge-overlay.wooap-position-topright {
+    top: 10px;
+    right: 10px;
+    left: auto;
+    bottom: auto;
+    transform: none;
+}
+
+.wooap-badge-overlay.wooap-position-bottomleft {
+    bottom: 10px;
+    left: 10px;
+    top: auto;
+    right: auto;
+    transform: none;
+}
+
+.wooap-badge-overlay.wooap-position-bottomright {
+    bottom: 10px;
+    right: 10px;
+    top: auto;
+    left: auto;
+    transform: none;
+}
+
+.wooap-badge-overlay.wooap-position-center {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+}
+
+/* Product image wrapper for badge overlay */
+.wooap-product-image-wrapper {
+    position: relative;
+    display: block;
+}
+
+/* Ensure product list item is positioned relative */
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
     position: relative;
 }
 
+/* Ensure product link container is positioned relative for absolute badge positioning */
 .woocommerce ul.products li.product .woocommerce-loop-product__link,
-.woocommerce-page ul.products li.product .woocommerce-loop-product__link {
+.woocommerce-page ul.products li.product .woocommerce-loop-product__link,
+.woocommerce ul.products li.product a,
+.woocommerce-page ul.products li.product a {
     position: relative;
     display: block;
 }
 
+/* Ensure product image container is positioned relative */
+.woocommerce ul.products li.product .woocommerce-loop-product__link img,
+.woocommerce-page ul.products li.product .woocommerce-loop-product__link img,
+.woocommerce ul.products li.product img,
+.woocommerce-page ul.products li.product img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Ensure badge overlays the product image area - multiple selector strategies */
+.woocommerce ul.products li.product .wooap-badge-overlay,
+.woocommerce-page ul.products li.product .wooap-badge-overlay,
+.woocommerce ul.products li.product .wooap-product-image-wrapper .wooap-badge-overlay {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+}
+
+/* Alternative selectors for different theme structures */
+.woocommerce ul.products li.product .product-image,
+.woocommerce ul.products li.product .product-thumbnail,
+.woocommerce ul.products li.product figure,
+.woocommerce ul.products li.product .wp-post-image-wrapper {
+    position: relative;
+}
+
+/* Handle cases where badge might be rendered in different positions */
+.woocommerce ul.products li.product .woocommerce-loop-product__title + .wooap-badge-overlay,
+.woocommerce ul.products li.product h2 + .wooap-badge-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   SINGLE PRODUCT PAGE BADGE STYLES
+   ========================================================================== */
+
 /* Inline badge for product page */
 .wooap-badge-inline {
-    margin-left: 10px;
+    display: inline-block;
     vertical-align: middle;
 }
 
-/* Alternative badge styles - can be customized via settings in future */
-.wooap-purchased-badge.wooap-style-rounded {
-    border-radius: 20px;
+/* Single product page badge positions */
+.wooap-badge-inline.wooap-product-position-top_title {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 0;
 }
 
-.wooap-purchased-badge.wooap-style-pill {
+.wooap-badge-inline.wooap-product-position-bottom_title {
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.wooap-badge-inline.wooap-product-position-after_title {
+    margin-left: 10px;
+}
+
+/* Single product badge styles */
+.wooap-badge-inline.wooap-style-rounded {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.wooap-badge-inline.wooap-style-pill {
     border-radius: 50px;
-    padding: 4px 16px;
+    padding: 8px 20px;
+    font-size: 14px;
 }
 
-/* Badge color variations */
+/* Checkmark icon styles */
+.wooap-purchased-badge .wooap-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.wooap-badge-inline.wooap-has-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Icon sizing for different styles */
+.wooap-badge-inline.wooap-style-pill .wooap-icon,
+.wooap-badge-inline.wooap-style-rounded .wooap-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Make single product badge more prominent */
+.wooap-badge-inline.wooap-has-icon,
+.wooap-badge-inline.wooap-style-pill,
+.wooap-badge-inline.wooap-style-rounded {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   CART PAGE BADGE STYLES
+   ========================================================================== */
+
+/* Cart badge base styles */
+.wooap-cart-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+    background-color: #17a2b8;
+    text-transform: none;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    box-shadow: none;
+}
+
+/* Cart badge with icon */
+.wooap-cart-badge.wooap-has-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.wooap-cart-badge .wooap-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+/* Cart table adjustments */
+.woocommerce-cart-form .wooap-cart-badge {
+    white-space: nowrap;
+}
+
+/* Cart badge below product name */
+.woocommerce-cart-form td.product-name .wooap-cart-badge {
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   BADGE COLOR VARIATIONS
+   ========================================================================== */
+
 .wooap-purchased-badge.wooap-color-green {
     background-color: #28a745;
     color: #ffffff;
@@ -74,15 +257,64 @@
     color: #ffffff;
 }
 
-/* Responsive adjustments */
+.wooap-purchased-badge.wooap-color-info {
+    background-color: #17a2b8;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+
 @media (max-width: 768px) {
     .wooap-purchased-badge {
         font-size: 11px;
         padding: 5px 10px;
     }
     
-    .wooap-badge-overlay {
+    /* Shop page responsive */
+    .wooap-badge-overlay.wooap-position-topleft {
         top: 5px;
         left: 5px;
+    }
+    
+    .wooap-badge-overlay.wooap-position-topright {
+        top: 5px;
+        right: 5px;
+    }
+    
+    .wooap-badge-overlay.wooap-position-bottomleft {
+        bottom: 5px;
+        left: 5px;
+    }
+    
+    .wooap-badge-overlay.wooap-position-bottomright {
+        bottom: 5px;
+        right: 5px;
+    }
+    
+    /* Single product badge responsive */
+    .wooap-badge-inline.wooap-style-pill,
+    .wooap-badge-inline.wooap-style-rounded {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+    
+    .wooap-purchased-badge .wooap-icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+    }
+    
+    /* Cart badge responsive */
+    .wooap-cart-badge {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    
+    .wooap-cart-badge .wooap-icon {
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace WooAlreadyPurchased\Includes\Services;
 
-use WooAlreadyPurchased\Includes\Settings;
+use WooAlreadyPurchased\Includes\Settings\GeneralSettings;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -56,7 +56,7 @@ class PurchaseChecker
             return self::$purchased_cache[$user_id];
         }
 
-        $statuses = Settings::getOrderStatuses();
+        $statuses = GeneralSettings::getOrderStatuses();
         $statuses = array_map(function ($status) {
             return str_replace('wc-', '', $status);
         }, $statuses);
