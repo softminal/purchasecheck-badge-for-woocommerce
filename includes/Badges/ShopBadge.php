@@ -98,7 +98,7 @@ class ShopBadge extends BaseBadge
             return;
         }
 
-        echo $this->getBadgeHtml();
+        echo esc_html($this->getBadgeHtml());
     }
 
     /**
@@ -144,7 +144,7 @@ class ShopBadge extends BaseBadge
         $badge_html = $this->getBadgeHtml();
 
         // Wrap image in a container with the badge
-        return '<div class="wooap-product-image-wrapper" style="position: relative; display: block;">' . $image . $badge_html . '</div>';
+        return '<div class="apwoo_product-image-wrapper" style="position: relative; display: block;">' . $image . $badge_html . '</div>';
     }
 
     /**
@@ -156,12 +156,12 @@ class ShopBadge extends BaseBadge
     {
         $badge_text = $this->getBadgeText();
         $position = ShopPageSettings::getBadgePosition();
-        $position_class = 'wooap-position-' . esc_attr($position);
+        $position_class = 'apwoo_position-' . esc_attr($position);
         
         return sprintf(
-            '<span class="wooap-purchased-badge wooap-badge-overlay wooap-shop-badge %s">%s</span>',
+            '<span class="apwoo_purchased-badge apwoo_badge-overlay apwoo_shop-badge %s">%s</span>',
             esc_attr($position_class),
-            esc_html($badge_text)
+            $badge_text
         );
     }
 }

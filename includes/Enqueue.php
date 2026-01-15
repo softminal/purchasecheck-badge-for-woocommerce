@@ -48,7 +48,7 @@ class Enqueue
 
         // Enqueue CSS for badge styling
         wp_enqueue_style(
-            'woo-already-purchased-badge-style',
+            'already-purchased-for-woo-badge-style',
             WOO_ALREADY_PURCHASED_URL . 'assets/css/badge.css',
             [],
             WOO_ALREADY_PURCHASED_VERSION
@@ -75,7 +75,7 @@ class Enqueue
         $css .= $this->getCartBadgeCss();
 
         // Output CSS
-        echo '<style id="wooap-dynamic-badge-css">' . $css . '</style>' . "\n";
+        echo '<style id="apwoo-dynamic-badge-css">' . esc_attr($css) . '</style>' . "\n";
     }
 
     /**
@@ -85,7 +85,7 @@ class Enqueue
      */
     private function getShopBadgeCss()
     {
-        return $this->buildBadgeCss('.wooap-shop-badge', [
+        return $this->buildBadgeCss('.apwoo_shop-badge', [
             'bg_color' => ShopPageSettings::getBgColor(),
             'text_color' => ShopPageSettings::getTextColor(),
             'border_width' => ShopPageSettings::getBorderWidth(),
@@ -105,7 +105,7 @@ class Enqueue
      */
     private function getProductBadgeCss()
     {
-        return $this->buildBadgeCss('.wooap-product-badge', [
+        return $this->buildBadgeCss('.apwoo_product-badge', [
             'bg_color' => ProductPageSettings::getBgColor(),
             'text_color' => ProductPageSettings::getTextColor(),
             'border_width' => ProductPageSettings::getBorderWidth(),
@@ -125,7 +125,7 @@ class Enqueue
      */
     private function getCartBadgeCss()
     {
-        return $this->buildBadgeCss('.wooap-cart-badge', [
+        return $this->buildBadgeCss('.apwoo_cart-badge', [
             'bg_color' => CartSettings::getBgColor(),
             'text_color' => CartSettings::getTextColor(),
             'border_width' => CartSettings::getBorderWidth(),

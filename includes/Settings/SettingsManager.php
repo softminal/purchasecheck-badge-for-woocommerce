@@ -10,14 +10,14 @@ if (!defined('ABSPATH')) {
  * Settings Manager
  * 
  * Main settings handler that coordinates all setting tabs.
- * Adds settings under WooCommerce → Settings → WooAP
+* Adds settings under WooCommerce → Settings → Already Purchased for WooCommerce
  */
 class SettingsManager
 {
     /**
      * Tab ID
      */
-    const TAB_ID = 'wooap';
+    const TAB_ID = 'apwoo';
 
     /**
      * Settings instances
@@ -64,10 +64,10 @@ class SettingsManager
     public function getSections()
     {
         return [
-            '' => __('General', 'woo-already-purchased'),
-            'shop_page' => __('Shop Page', 'woo-already-purchased'),
-            'product_page' => __('Product Page', 'woo-already-purchased'),
-            'cart' => __('Cart', 'woo-already-purchased'),
+            '' => __('General', 'already-purchased-for-woo'),
+            'shop_page' => __('Shop Page', 'already-purchased-for-woo'),
+            'product_page' => __('Product Page', 'already-purchased-for-woo'),
+            'cart' => __('Cart', 'already-purchased-for-woo'),
         ];
     }
 
@@ -90,10 +90,10 @@ class SettingsManager
 
         foreach ($sections as $id => $label) {
             $url = admin_url('admin.php?page=wc-settings&tab=' . self::TAB_ID . '&section=' . $id);
-            $current = ($current_section === $id) ? 'class="current"' : '';
+            $current_class = ($current_section === $id) ? 'current' : '';
             $separator = (end($section_keys) === $id) ? '' : ' | ';
 
-            echo '<li><a href="' . esc_url($url) . '" ' . $current . '>' . esc_html($label) . '</a>' . $separator . '</li>';
+            echo '<li><a href="' . esc_url($url) . '" class="' . esc_attr($current_class) . '">' . esc_html($label) . '</a>' . esc_html($separator) . '</li>';
         }
 
         echo '</ul><br class="clear" />';
@@ -111,7 +111,7 @@ class SettingsManager
             $tabs = [];
         }
         
-        $tabs[self::TAB_ID] = __('WooAP', 'woo-already-purchased');
+        $tabs[self::TAB_ID] = __('APWoo', 'already-purchased-for-woo');
         
         return $tabs;
     }

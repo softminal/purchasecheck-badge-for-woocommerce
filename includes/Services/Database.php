@@ -9,7 +9,7 @@ namespace WooAlreadyPurchased\Includes\Services;
  *
  * @package WooAlreadyPurchased\Includes\Services
  */
-// This file is part of the Woo Already Purchased plugin for WordPress.
+// This file is part of the Already Purchased for WooCommerce plugin for WordPress.
 // It is subject to the terms and conditions defined in the file 'LICENSE.txt', which is part of this source code package.
 if (!defined('ABSPATH')) {
     exit;

@@ -1,9 +1,9 @@
 /**
- * Woo Already Purchased Badge Styles
+ * Already Purchased for WooCommerce Badge Styles
  */
 
 /* Base badge styles */
-.wooap-purchased-badge {
+.apwoo_purchased-badge {
     display: inline-block;
     width: fit-content;
     padding: 6px 12px;
@@ -23,14 +23,14 @@
    ========================================================================== */
 
 /* Overlay badge for shop/category pages */
-.wooap-badge-overlay {
+.apwoo_badge-overlay {
     position: absolute;
     z-index: 999;
     pointer-events: none;
 }
 
 /* Shop page badge positions */
-.wooap-badge-overlay.wooap-position-topleft {
+.apwoo_badge-overlay.apwoo_position-topleft {
     top: 10px;
     left: 10px;
     right: auto;
@@ -38,7 +38,7 @@
     transform: none;
 }
 
-.wooap-badge-overlay.wooap-position-topright {
+.apwoo_badge-overlay.apwoo_position-topright {
     top: 10px;
     right: 10px;
     left: auto;
@@ -46,7 +46,7 @@
     transform: none;
 }
 
-.wooap-badge-overlay.wooap-position-bottomleft {
+.apwoo_badge-overlay.apwoo_position-bottomleft {
     bottom: 10px;
     left: 10px;
     top: auto;
@@ -54,7 +54,7 @@
     transform: none;
 }
 
-.wooap-badge-overlay.wooap-position-bottomright {
+.apwoo_badge-overlay.apwoo_position-bottomright {
     bottom: 10px;
     right: 10px;
     top: auto;
@@ -62,7 +62,7 @@
     transform: none;
 }
 
-.wooap-badge-overlay.wooap-position-center {
+.apwoo_badge-overlay.apwoo_position-center {
     top: 50%;
     left: 50%;
     right: auto;
@@ -71,7 +71,7 @@
 }
 
 /* Product image wrapper for badge overlay */
-.wooap-product-image-wrapper {
+.apwoo_product-image-wrapper {
     position: relative;
     display: block;
 }
@@ -102,9 +102,9 @@
 }
 
 /* Ensure badge overlays the product image area - multiple selector strategies */
-.woocommerce ul.products li.product .wooap-badge-overlay,
-.woocommerce-page ul.products li.product .wooap-badge-overlay,
-.woocommerce ul.products li.product .wooap-product-image-wrapper .wooap-badge-overlay {
+.woocommerce ul.products li.product .apwoo_badge-overlay,
+.woocommerce-page ul.products li.product .apwoo_badge-overlay,
+.woocommerce ul.products li.product .apwoo_product-image-wrapper .apwoo_badge-overlay {
     position: absolute;
     z-index: 999;
     pointer-events: none;
@@ -119,8 +119,8 @@
 }
 
 /* Handle cases where badge might be rendered in different positions */
-.woocommerce ul.products li.product .woocommerce-loop-product__title + .wooap-badge-overlay,
-.woocommerce ul.products li.product h2 + .wooap-badge-overlay {
+.woocommerce ul.products li.product .woocommerce-loop-product__title + .apwoo_badge-overlay,
+.woocommerce ul.products li.product h2 + .apwoo_badge-overlay {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -133,65 +133,65 @@
    ========================================================================== */
 
 /* Inline badge for product page */
-.wooap-badge-inline {
+.apwoo_badge-inline {
     display: inline-block;
     vertical-align: middle;
 }
 
 /* Single product page badge positions */
-.wooap-badge-inline.wooap-product-position-top_title {
+.apwoo_badge-inline.apwoo_product-position-top_title {
     display: block;
     margin-bottom: 10px;
     margin-left: 0;
 }
 
-.wooap-badge-inline.wooap-product-position-bottom_title {
+.apwoo_badge-inline.apwoo_product-position-bottom_title {
     display: block;
     margin-top: 10px;
     margin-left: 0;
 }
 
-.wooap-badge-inline.wooap-product-position-after_title {
+.apwoo_badge-inline.apwoo_product-position-after_title {
     margin-left: 10px;
 }
 
 /* Single product badge styles */
-.wooap-badge-inline.wooap-style-rounded {
+.apwoo_badge-inline.apwoo_style-rounded {
     border-radius: 8px;
     padding: 8px 16px;
     font-size: 14px;
 }
 
-.wooap-badge-inline.wooap-style-pill {
+.apwoo_badge-inline.apwoo_style-pill {
     border-radius: 50px;
     padding: 8px 20px;
     font-size: 14px;
 }
 
 /* Checkmark icon styles */
-.wooap-purchased-badge .wooap-icon {
+.apwoo_purchased-badge .apwoo_icon {
     display: inline-block;
     vertical-align: middle;
     margin-right: 6px;
     flex-shrink: 0;
 }
 
-.wooap-badge-inline.wooap-has-icon {
+.apwoo_badge-inline.apwoo_has-icon {
     display: inline-flex;
     align-items: center;
 }
 
 /* Icon sizing for different styles */
-.wooap-badge-inline.wooap-style-pill .wooap-icon,
-.wooap-badge-inline.wooap-style-rounded .wooap-icon {
+.apwoo_badge-inline.apwoo_style-pill .apwoo_icon,
+.apwoo_badge-inline.apwoo_style-rounded .apwoo_icon {
     width: 16px;
     height: 16px;
 }
 
 /* Make single product badge more prominent */
-.wooap-badge-inline.wooap-has-icon,
-.wooap-badge-inline.wooap-style-pill,
-.wooap-badge-inline.wooap-style-rounded {
+.apwoo_badge-inline.apwoo_has-icon,
+.apwoo_badge-inline.apwoo_style-pill,
+.apwoo_badge-inline.apwoo_style-rounded {
     font-weight: 600;
     letter-spacing: 0.3px;
 }
@@ -201,7 +201,7 @@
    ========================================================================== */
 
 /* Cart badge base styles */
-.wooap-cart-badge {
+.apwoo_cart-badge {
     font-size: 11px;
     padding: 4px 8px;
     background-color: #17a2b8;
@@ -212,24 +212,24 @@
 }
 
 /* Cart badge with icon */
-.wooap-cart-badge.wooap-has-icon {
+.apwoo_cart-badge.apwoo_has-icon {
     display: inline-flex;
     align-items: center;
 }
 
-.wooap-cart-badge .wooap-icon {
+.apwoo_cart-badge .apwoo_icon {
     width: 12px;
     height: 12px;
     margin-right: 4px;
 }
 
 /* Cart table adjustments */
-.woocommerce-cart-form .wooap-cart-badge {
+.woocommerce-cart-form .apwoo_cart-badge {
     white-space: nowrap;
 }
 
 /* Cart badge below product name */
-.woocommerce-cart-form td.product-name .wooap-cart-badge {
+.woocommerce-cart-form td.product-name .apwoo_cart-badge {
     margin-top: 5px;
 }
 
@@ -237,27 +237,27 @@
    BADGE COLOR VARIATIONS
    ========================================================================== */
 
-.wooap-purchased-badge.wooap-color-green {
+.apwoo_purchased-badge.apwoo_color-green {
     background-color: #28a745;
     color: #ffffff;
 }
 
-.wooap-purchased-badge.wooap-color-blue {
+.apwoo_purchased-badge.apwoo_color-blue {
     background-color: #007bff;
     color: #ffffff;
 }
 
-.wooap-purchased-badge.wooap-color-orange {
+.apwoo_purchased-badge.apwoo_color-orange {
     background-color: #ff9800;
     color: #ffffff;
 }
 
-.wooap-purchased-badge.wooap-color-red {
+.apwoo_purchased-badge.apwoo_color-red {
     background-color: #dc3545;
     color: #ffffff;
 }
 
-.wooap-purchased-badge.wooap-color-info {
+.apwoo_purchased-badge.apwoo_color-info {
     background-color: #17a2b8;
     color: #ffffff;
 }
@@ -267,52 +267,52 @@
    ========================================================================== */
 
 @media (max-width: 768px) {
-    .wooap-purchased-badge {
+    .apwoo_purchased-badge {
         font-size: 11px;
         padding: 5px 10px;
     }
     
     /* Shop page responsive */
-    .wooap-badge-overlay.wooap-position-topleft {
+    .apwoo_badge-overlay.apwoo_position-topleft {
         top: 5px;
         left: 5px;
     }
     
-    .wooap-badge-overlay.wooap-position-topright {
+    .apwoo_badge-overlay.apwoo_position-topright {
         top: 5px;
         right: 5px;
     }
     
-    .wooap-badge-overlay.wooap-position-bottomleft {
+    .apwoo_badge-overlay.apwoo_position-bottomleft {
         bottom: 5px;
         left: 5px;
     }
     
-    .wooap-badge-overlay.wooap-position-bottomright {
+    .apwoo_badge-overlay.apwoo_position-bottomright {
         bottom: 5px;
         right: 5px;
     }
     
     /* Single product badge responsive */
-    .wooap-badge-inline.wooap-style-pill,
-    .wooap-badge-inline.wooap-style-rounded {
+    .apwoo_badge-inline.apwoo_style-pill,
+    .apwoo_badge-inline.apwoo_style-rounded {
         font-size: 12px;
         padding: 6px 14px;
     }
     
-    .wooap-purchased-badge .wooap-icon {
+    .apwoo_purchased-badge .apwoo_icon {
         width: 12px;
         height: 12px;
         margin-right: 4px;
     }
     
     /* Cart badge responsive */
-    .wooap-cart-badge {
+    .apwoo_cart-badge {
         font-size: 10px;
         padding: 3px 6px;
     }
     
-    .wooap-cart-badge .wooap-icon {
+    .apwoo_cart-badge .apwoo_icon {
         width: 10px;
         height: 10px;
         margin-right: 3px;

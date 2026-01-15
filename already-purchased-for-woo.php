@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name:       Woo Already Purchased
+ * Plugin Name:       Already Purchased for Woo
  * Plugin URI:        https://wooalreadypurchased.com/
  * Description:       A plugin that adds a custom field to the product page to check if the customer has already purchased the product.
  * Version:           1.0.0
@@ -9,7 +9,7 @@
  * Author URI:        https://softminal.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       woo-already-purchased
+ * Text Domain:       already-purchased-for-woo
  * Domain Path:       /languages
  */
 

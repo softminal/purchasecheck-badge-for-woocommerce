@@ -13,7 +13,7 @@ Display a "Purchased" badge on WooCommerce products customers have already bough
 
 ## Description
 
-Already Purchased for Woo is a lightweight WordPress plugin that enhances your WooCommerce store by displaying a customizable badge on products that logged-in customers have already purchased. This helps customers quickly identify products they own, reducing duplicate purchases and improving user experience.
+Already Purchased for WooCommerce is a lightweight WordPress plugin that enhances your WooCommerce store by displaying a customizable badge on products that logged-in customers have already purchased. This helps customers quickly identify products they own, reducing duplicate purchases and improving user experience.
 
 ### Key Features
 
@@ -46,7 +46,7 @@ Configure the plugin through **WooCommerce → Settings → APWoo**:
 
 1. Log in to your WordPress admin panel
 2. Navigate to **Plugins → Add New**
-3. Search for "Already Purchased for WooCommerce"
+3. Search for "Already Purchased for Woo"
 4. Click **Install Now** and then **Activate**
 
 ### Manual Installation

@@ -51,7 +51,6 @@ class App
             $this->initializeClasses();
         } catch (Exception $e) {
             // Log the error and handle it appropriately
-            error_log('Woo Already Purchased Plugin Error: ' . $e->getMessage());
             throw $e;
         }
     }
@@ -87,7 +86,7 @@ class App
         foreach ($requiredFiles as $file) {
             $filePath = WOO_ALREADY_PURCHASED_DIR . $file;
             if (!file_exists($filePath)) {
-                throw new Exception("Required file not found: {$file}");
+                throw new Exception( esc_html( "Required file not found: {$file}" ) );
             }
             require_once $filePath;
         }
@@ -133,7 +132,6 @@ class App
             // Register cache clearing hooks
             $this->registerCacheClearingHooks();
         } catch (Exception $e) {
-            error_log('Woo Already Purchased Plugin Error: ' . $e->getMessage());
             throw $e;
         }
     }

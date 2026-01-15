@@ -97,7 +97,7 @@ abstract class BaseBadge
     protected function getCheckmarkIcon($width = 14, $height = 14)
     {
         return sprintf(
-            '<svg class="wooap-icon" width="%d" height="%d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>',
+            '<svg class="apwoo_icon" width="%d" height="%d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>',
             absint($width),
             absint($height)
         );

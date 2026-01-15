@@ -9,14 +9,14 @@ if (!defined('ABSPATH')) {
 /**
  * General Settings
  * 
- * Handles general/global settings for the WooAP plugin.
+ * Handles general/global settings for the Already Purchased for WooCommerce plugin.
  */
 class GeneralSettings
 {
     /**
      * Section prefix
      */
-    const PREFIX = 'wooap_general_';
+    const PREFIX = 'apwoo_general_';
 
     /**
      * Get settings fields
@@ -27,22 +27,22 @@ class GeneralSettings
     {
         return [
             [
-                'title' => __('General Settings', 'woo-already-purchased'),
+                'title' => __('General Settings', 'already-purchased-for-woo'),
                 'type' => 'title',
-                'desc' => __('Configure the basic settings for the "Already Purchased" badge feature.', 'woo-already-purchased'),
+                'desc' => __('Configure the basic settings for the "Already Purchased" badge feature.', 'already-purchased-for-woo'),
                 'id' => self::PREFIX . 'title'
             ],
             [
-                'title' => __('Enable Badge', 'woo-already-purchased'),
-                'desc' => __('Enable the purchased badge feature globally', 'woo-already-purchased'),
-                'id' => 'wooap_enable_badge',
+                'title' => __('Enable Badge', 'already-purchased-for-woo'),
+                'desc' => __('Enable the purchased badge feature globally', 'already-purchased-for-woo'),
+                'id' => 'apwoo_enable_badge',
                 'default' => 'yes',
                 'type' => 'checkbox'
             ],
             [
-                'title' => __('Order Statuses', 'woo-already-purchased'),
-                'desc' => __('Select which order statuses count as "purchased". Hold Ctrl/Cmd to select multiple.', 'woo-already-purchased'),
-                'id' => 'wooap_order_statuses',
+                'title' => __('Order Statuses', 'already-purchased-for-woo'),
+                'desc' => __('Select which order statuses count as "purchased". Hold Ctrl/Cmd to select multiple.', 'already-purchased-for-woo'),
+                'id' => 'apwoo_order_statuses',
                 'default' => ['wc-completed', 'wc-processing'],
                 'type' => 'multiselect',
                 'class' => 'wc-enhanced-select',
@@ -81,7 +81,7 @@ class GeneralSettings
      */
     public static function isBadgeEnabled()
     {
-        return SettingsManager::get('wooap_enable_badge', true);
+        return SettingsManager::get('apwoo_enable_badge', true);
     }
 
     /**
@@ -91,7 +91,7 @@ class GeneralSettings
      */
     public static function getOrderStatuses()
     {
-        $statuses = get_option('wooap_order_statuses', ['wc-completed', 'wc-processing']);
+        $statuses = get_option('apwoo_order_statuses', ['wc-completed', 'wc-processing']);
         
         // WooCommerce multiselect may be stored as serialized string
         if (is_string($statuses)) {

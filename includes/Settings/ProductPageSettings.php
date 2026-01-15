@@ -16,7 +16,7 @@ class ProductPageSettings
     /**
      * Section prefix
      */
-    const PREFIX = 'wooap_product_';
+    const PREFIX = 'apwoo_product_';
 
     /**
      * Get settings fields
@@ -28,58 +28,58 @@ class ProductPageSettings
         return [
             // Display Settings
             [
-                'title' => __('Product Page Display Settings', 'woo-already-purchased'),
+                'title' => __('Product Page Display Settings', 'already-purchased-for-woo'),
                 'type' => 'title',
-                'desc' => __('Configure badge display on single product pages.', 'woo-already-purchased'),
+                'desc' => __('Configure badge display on single product pages.', 'already-purchased-for-woo'),
                 'id' => self::PREFIX . 'display_title'
             ],
             [
-                'title' => __('Enable on Product Page', 'woo-already-purchased'),
-                'desc' => __('Display badge on single product pages', 'woo-already-purchased'),
-                'id' => 'wooap_show_product',
+                'title' => __('Enable on Product Page', 'already-purchased-for-woo'),
+                'desc' => __('Display badge on single product pages', 'already-purchased-for-woo'),
+                'id' => 'apwoo_show_product',
                 'default' => 'yes',
                 'type' => 'checkbox'
             ],
             [
-                'title' => __('Badge Text', 'woo-already-purchased'),
-                'desc' => __('Text to display on the badge (product pages)', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_text',
-                'default' => __('Purchased', 'woo-already-purchased'),
+                'title' => __('Badge Text', 'already-purchased-for-woo'),
+                'desc' => __('Text to display on the badge (product pages)', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_text',
+                'default' => __('Purchased', 'already-purchased-for-woo'),
                 'type' => 'text',
                 'css' => 'min-width:300px;'
             ],
             [
-                'title' => __('Badge Position', 'woo-already-purchased'),
-                'desc' => __('Choose where to display the badge on single product pages', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_position',
+                'title' => __('Badge Position', 'already-purchased-for-woo'),
+                'desc' => __('Choose where to display the badge on single product pages', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_position',
                 'default' => 'after_title',
                 'type' => 'select',
                 'class' => 'wc-enhanced-select',
                 'css' => 'min-width:300px;',
                 'options' => [
-                    'top_title' => __('Top of Title', 'woo-already-purchased'),
-                    'bottom_title' => __('Bottom of Title', 'woo-already-purchased'),
-                    'after_title' => __('After Title (Inline)', 'woo-already-purchased'),
+                    'top_title' => __('Top of Title', 'already-purchased-for-woo'),
+                    'bottom_title' => __('Bottom of Title', 'already-purchased-for-woo'),
+                    'after_title' => __('After Title (Inline)', 'already-purchased-for-woo'),
                 ]
             ],
             [
-                'title' => __('Badge Style', 'woo-already-purchased'),
-                'desc' => __('Choose the badge style for single product pages', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_style',
+                'title' => __('Badge Style', 'already-purchased-for-woo'),
+                'desc' => __('Choose the badge style for single product pages', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_style',
                 'default' => 'default',
                 'type' => 'select',
                 'class' => 'wc-enhanced-select',
                 'css' => 'min-width:300px;',
                 'options' => [
-                    'default' => __('Default', 'woo-already-purchased'),
-                    'pill' => __('Pill / Tag', 'woo-already-purchased'),
-                    'rounded' => __('Rounded', 'woo-already-purchased'),
+                    'default' => __('Default', 'already-purchased-for-woo'),
+                    'pill' => __('Pill / Tag', 'already-purchased-for-woo'),
+                    'rounded' => __('Rounded', 'already-purchased-for-woo'),
                 ]
             ],
             [
-                'title' => __('Show Checkmark Icon', 'woo-already-purchased'),
-                'desc' => __('Display a checkmark icon before badge text', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_icon',
+                'title' => __('Show Checkmark Icon', 'already-purchased-for-woo'),
+                'desc' => __('Display a checkmark icon before badge text', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_icon',
                 'default' => 'no',
                 'type' => 'checkbox'
             ],
@@ -89,33 +89,33 @@ class ProductPageSettings
             ],
             // Design Settings
             [
-                'title' => __('Product Page Badge Design', 'woo-already-purchased'),
+                'title' => __('Product Page Badge Design', 'already-purchased-for-woo'),
                 'type' => 'title',
-                'desc' => __('Customize the appearance of the badge on product pages.', 'woo-already-purchased'),
+                'desc' => __('Customize the appearance of the badge on product pages.', 'already-purchased-for-woo'),
                 'id' => self::PREFIX . 'design_title'
             ],
             [
-                'title' => __('Background Color', 'woo-already-purchased'),
-                'desc' => __('Badge background color (e.g., #28a745 or rgba(40, 167, 69, 0.9))', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_bg_color',
+                'title' => __('Background Color', 'already-purchased-for-woo'),
+                'desc' => __('Badge background color (e.g., #28a745 or rgba(40, 167, 69, 0.9))', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_bg_color',
                 'default' => '#28a745',
                 'type' => 'text',
                 'css' => 'min-width:200px;',
                 'placeholder' => '#28a745'
             ],
             [
-                'title' => __('Text Color', 'woo-already-purchased'),
-                'desc' => __('Badge text color (e.g., #ffffff)', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_text_color',
+                'title' => __('Text Color', 'already-purchased-for-woo'),
+                'desc' => __('Badge text color (e.g., #ffffff)', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_text_color',
                 'default' => '#ffffff',
                 'type' => 'text',
                 'css' => 'min-width:200px;',
                 'placeholder' => '#ffffff'
             ],
             [
-                'title' => __('Font Size', 'woo-already-purchased'),
-                'desc' => __('Badge font size in pixels', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_font_size',
+                'title' => __('Font Size', 'already-purchased-for-woo'),
+                'desc' => __('Badge font size in pixels', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_font_size',
                 'default' => '14',
                 'type' => 'number',
                 'css' => 'width:100px;',
@@ -125,18 +125,18 @@ class ProductPageSettings
                 ]
             ],
             [
-                'title' => __('Padding', 'woo-already-purchased'),
-                'desc' => __('Badge padding in pixels (vertical horizontal, e.g., 8 16)', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_padding',
+                'title' => __('Padding', 'already-purchased-for-woo'),
+                'desc' => __('Badge padding in pixels (vertical horizontal, e.g., 8 16)', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_padding',
                 'default' => '8 16',
                 'type' => 'text',
                 'css' => 'min-width:150px;',
                 'placeholder' => '8 16'
             ],
             [
-                'title' => __('Border Width', 'woo-already-purchased'),
-                'desc' => __('Badge border width in pixels (0 to disable)', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_border_width',
+                'title' => __('Border Width', 'already-purchased-for-woo'),
+                'desc' => __('Badge border width in pixels (0 to disable)', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_border_width',
                 'default' => '0',
                 'type' => 'number',
                 'css' => 'width:100px;',
@@ -146,18 +146,18 @@ class ProductPageSettings
                 ]
             ],
             [
-                'title' => __('Border Color', 'woo-already-purchased'),
-                'desc' => __('Badge border color (e.g., #ffffff)', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_border_color',
+                'title' => __('Border Color', 'already-purchased-for-woo'),
+                'desc' => __('Badge border color (e.g., #ffffff)', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_border_color',
                 'default' => '#ffffff',
                 'type' => 'text',
                 'css' => 'min-width:200px;',
                 'placeholder' => '#ffffff'
             ],
             [
-                'title' => __('Border Radius', 'woo-already-purchased'),
-                'desc' => __('Badge border radius in pixels', 'woo-already-purchased'),
-                'id' => 'wooap_product_badge_border_radius',
+                'title' => __('Border Radius', 'already-purchased-for-woo'),
+                'desc' => __('Badge border radius in pixels', 'already-purchased-for-woo'),
+                'id' => 'apwoo_product_badge_border_radius',
                 'default' => '3',
                 'type' => 'number',
                 'css' => 'width:100px;',
@@ -184,7 +184,7 @@ class ProductPageSettings
      */
     public static function showOnProduct()
     {
-        return SettingsManager::get('wooap_show_product', true);
+        return SettingsManager::get('apwoo_show_product', true);
     }
 
     /**
@@ -194,7 +194,7 @@ class ProductPageSettings
      */
     public static function getBadgeText()
     {
-        return SettingsManager::get('wooap_product_badge_text', __('Purchased', 'woo-already-purchased'));
+        return SettingsManager::get('apwoo_product_badge_text', __('Purchased', 'already-purchased-for-woo'));
     }
 
     /**
@@ -204,7 +204,7 @@ class ProductPageSettings
      */
     public static function getBadgePosition()
     {
-        return SettingsManager::get('wooap_product_badge_position', 'after_title');
+        return SettingsManager::get('apwoo_product_badge_position', 'after_title');
     }
 
     /**
@@ -214,7 +214,7 @@ class ProductPageSettings
      */
     public static function getBadgeStyle()
     {
-        return SettingsManager::get('wooap_product_badge_style', 'default');
+        return SettingsManager::get('apwoo_product_badge_style', 'default');
     }
 
     /**
@@ -224,7 +224,7 @@ class ProductPageSettings
      */
     public static function showIcon()
     {
-        return SettingsManager::get('wooap_product_badge_icon', false);
+        return SettingsManager::get('apwoo_product_badge_icon', false);
     }
 
     /**
@@ -234,7 +234,7 @@ class ProductPageSettings
      */
     public static function getBgColor()
     {
-        return SettingsManager::get('wooap_product_badge_bg_color', '#28a745');
+        return SettingsManager::get('apwoo_product_badge_bg_color', '#28a745');
     }
 
     /**
@@ -244,7 +244,7 @@ class ProductPageSettings
      */
     public static function getTextColor()
     {
-        return SettingsManager::get('wooap_product_badge_text_color', '#ffffff');
+        return SettingsManager::get('apwoo_product_badge_text_color', '#ffffff');
     }
 
     /**
@@ -254,7 +254,7 @@ class ProductPageSettings
      */
     public static function getFontSize()
     {
-        return (int) SettingsManager::get('wooap_product_badge_font_size', 14);
+        return (int) SettingsManager::get('apwoo_product_badge_font_size', 14);
     }
 
     /**
@@ -264,7 +264,7 @@ class ProductPageSettings
      */
     public static function getPadding()
     {
-        return SettingsManager::get('wooap_product_badge_padding', '8 16');
+        return SettingsManager::get('apwoo_product_badge_padding', '8 16');
     }
 
     /**
@@ -274,7 +274,7 @@ class ProductPageSettings
      */
     public static function getBorderWidth()
     {
-        return (int) SettingsManager::get('wooap_product_badge_border_width', 0);
+        return (int) SettingsManager::get('apwoo_product_badge_border_width', 0);
     }
 
     /**
@@ -284,7 +284,7 @@ class ProductPageSettings
      */
     public static function getBorderColor()
     {
-        return SettingsManager::get('wooap_product_badge_border_color', '#ffffff');
+        return SettingsManager::get('apwoo_product_badge_border_color', '#ffffff');
     }
 
     /**
@@ -294,6 +294,6 @@ class ProductPageSettings
      */
     public static function getBorderRadius()
     {
-        return (int) SettingsManager::get('wooap_product_badge_border_radius', 3);
+        return (int) SettingsManager::get('apwoo_product_badge_border_radius', 3);
     }
 }

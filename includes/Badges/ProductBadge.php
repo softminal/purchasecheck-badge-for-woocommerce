@@ -89,7 +89,7 @@ class ProductBadge extends BaseBadge
         if (!$this->hasPurchased($product->get_id())) {
             return;
         }
-
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $this->getBadgeHtml();
     }
 
@@ -106,20 +106,20 @@ class ProductBadge extends BaseBadge
         $show_icon = ProductPageSettings::showIcon();
 
         $classes = [
-            'wooap-purchased-badge',
-            'wooap-badge-inline',
-            'wooap-product-badge',
-            'wooap-product-position-' . esc_attr($position),
+            'apwoo_purchased-badge',
+            'apwoo_badge-inline',
+            'apwoo_product-badge',
+            'apwoo_product-position-' . esc_attr($position),
         ];
 
         // Add style class
         if ($style !== 'default') {
-            $classes[] = 'wooap-style-' . esc_attr($style);
+            $classes[] = 'apwoo_style-' . esc_attr($style);
         }
 
         // Add icon class if enabled
         if ($show_icon) {
-            $classes[] = 'wooap-has-icon';
+            $classes[] = 'apwoo_has-icon';
         }
 
         // Build badge content

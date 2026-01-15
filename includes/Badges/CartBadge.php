@@ -105,13 +105,13 @@ class CartBadge extends BaseBadge
         $show_icon = CartSettings::showIcon();
 
         $classes = [
-            'wooap-purchased-badge',
-            'wooap-badge-inline',
-            'wooap-cart-badge',
+            'apwoo_purchased-badge',
+            'apwoo_badge-inline',
+            'apwoo_cart-badge',
         ];
 
         if ($show_icon) {
-            $classes[] = 'wooap-has-icon';
+            $classes[] = 'apwoo_has-icon';
         }
 
         // Build badge content
