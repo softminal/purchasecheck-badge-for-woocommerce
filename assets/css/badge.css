@@ -1,9 +1,9 @@
 /**
- * Already Purchased for WooCommerce Badge Styles
+ * PurchaseCheck Badge for WooCommerce - Badge Styles
  */
 
 /* Base badge styles */
-.apwoo_purchased-badge {
+.pcbw_purchased-badge {
     display: inline-block;
     width: fit-content;
     padding: 6px 12px;
@@ -23,14 +23,14 @@
    ========================================================================== */
 
 /* Overlay badge for shop/category pages */
-.apwoo_badge-overlay {
+.pcbw_badge-overlay {
     position: absolute;
     z-index: 999;
     pointer-events: none;
 }
 
 /* Shop page badge positions */
-.apwoo_badge-overlay.apwoo_position-topleft {
+.pcbw_badge-overlay.pcbw_position-topleft {
     top: 10px;
     left: 10px;
     right: auto;
@@ -38,7 +38,7 @@
     transform: none;
 }
 
-.apwoo_badge-overlay.apwoo_position-topright {
+.pcbw_badge-overlay.pcbw_position-topright {
     top: 10px;
     right: 10px;
     left: auto;
@@ -46,7 +46,7 @@
     transform: none;
 }
 
-.apwoo_badge-overlay.apwoo_position-bottomleft {
+.pcbw_badge-overlay.pcbw_position-bottomleft {
     bottom: 10px;
     left: 10px;
     top: auto;
@@ -54,7 +54,7 @@
     transform: none;
 }
 
-.apwoo_badge-overlay.apwoo_position-bottomright {
+.pcbw_badge-overlay.pcbw_position-bottomright {
     bottom: 10px;
     right: 10px;
     top: auto;
@@ -62,7 +62,7 @@
     transform: none;
 }
 
-.apwoo_badge-overlay.apwoo_position-center {
+.pcbw_badge-overlay.pcbw_position-center {
     top: 50%;
     left: 50%;
     right: auto;
@@ -71,7 +71,7 @@
 }
 
 /* Product image wrapper for badge overlay */
-.apwoo_product-image-wrapper {
+.pcbw_product-image-wrapper {
     position: relative;
     display: block;
 }
@@ -102,9 +102,9 @@
 }
 
 /* Ensure badge overlays the product image area - multiple selector strategies */
-.woocommerce ul.products li.product .apwoo_badge-overlay,
-.woocommerce-page ul.products li.product .apwoo_badge-overlay,
-.woocommerce ul.products li.product .apwoo_product-image-wrapper .apwoo_badge-overlay {
+.woocommerce ul.products li.product .pcbw_badge-overlay,
+.woocommerce-page ul.products li.product .pcbw_badge-overlay,
+.woocommerce ul.products li.product .pcbw_product-image-wrapper .pcbw_badge-overlay {
     position: absolute;
     z-index: 999;
     pointer-events: none;
@@ -119,8 +119,8 @@
 }
 
 /* Handle cases where badge might be rendered in different positions */
-.woocommerce ul.products li.product .woocommerce-loop-product__title + .apwoo_badge-overlay,
-.woocommerce ul.products li.product h2 + .apwoo_badge-overlay {
+.woocommerce ul.products li.product .woocommerce-loop-product__title + .pcbw_badge-overlay,
+.woocommerce ul.products li.product h2 + .pcbw_badge-overlay {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -133,65 +133,65 @@
    ========================================================================== */
 
 /* Inline badge for product page */
-.apwoo_badge-inline {
+.pcbw_badge-inline {
     display: inline-block;
     vertical-align: middle;
 }
 
 /* Single product page badge positions */
-.apwoo_badge-inline.apwoo_product-position-top_title {
+.pcbw_badge-inline.pcbw_product-position-top_title {
     display: block;
     margin-bottom: 10px;
     margin-left: 0;
 }
 
-.apwoo_badge-inline.apwoo_product-position-bottom_title {
+.pcbw_badge-inline.pcbw_product-position-bottom_title {
     display: block;
     margin-top: 10px;
     margin-left: 0;
 }
 
-.apwoo_badge-inline.apwoo_product-position-after_title {
+.pcbw_badge-inline.pcbw_product-position-after_title {
     margin-left: 10px;
 }
 
 /* Single product badge styles */
-.apwoo_badge-inline.apwoo_style-rounded {
+.pcbw_badge-inline.pcbw_style-rounded {
     border-radius: 8px;
     padding: 8px 16px;
     font-size: 14px;
 }
 
-.apwoo_badge-inline.apwoo_style-pill {
+.pcbw_badge-inline.pcbw_style-pill {
     border-radius: 50px;
     padding: 8px 20px;
     font-size: 14px;
 }
 
 /* Checkmark icon styles */
-.apwoo_purchased-badge .apwoo_icon {
+.pcbw_purchased-badge .pcbw_icon {
     display: inline-block;
     vertical-align: middle;
     margin-right: 6px;
     flex-shrink: 0;
 }
 
-.apwoo_badge-inline.apwoo_has-icon {
+.pcbw_badge-inline.pcbw_has-icon {
     display: inline-flex;
     align-items: center;
 }
 
 /* Icon sizing for different styles */
-.apwoo_badge-inline.apwoo_style-pill .apwoo_icon,
-.apwoo_badge-inline.apwoo_style-rounded .apwoo_icon {
+.pcbw_badge-inline.pcbw_style-pill .pcbw_icon,
+.pcbw_badge-inline.pcbw_style-rounded .pcbw_icon {
     width: 16px;
     height: 16px;
 }
 
 /* Make single product badge more prominent */
-.apwoo_badge-inline.apwoo_has-icon,
-.apwoo_badge-inline.apwoo_style-pill,
-.apwoo_badge-inline.apwoo_style-rounded {
+.pcbw_badge-inline.pcbw_has-icon,
+.pcbw_badge-inline.pcbw_style-pill,
+.pcbw_badge-inline.pcbw_style-rounded {
     font-weight: 600;
     letter-spacing: 0.3px;
 }
@@ -201,7 +201,7 @@
    ========================================================================== */
 
 /* Cart badge base styles */
-.apwoo_cart-badge {
+.pcbw_cart-badge {
     font-size: 11px;
     padding: 4px 8px;
     background-color: #17a2b8;
@@ -212,24 +212,24 @@
 }
 
 /* Cart badge with icon */
-.apwoo_cart-badge.apwoo_has-icon {
+.pcbw_cart-badge.pcbw_has-icon {
     display: inline-flex;
     align-items: center;
 }
 
-.apwoo_cart-badge .apwoo_icon {
+.pcbw_cart-badge .pcbw_icon {
     width: 12px;
     height: 12px;
     margin-right: 4px;
 }
 
 /* Cart table adjustments */
-.woocommerce-cart-form .apwoo_cart-badge {
+.woocommerce-cart-form .pcbw_cart-badge {
     white-space: nowrap;
 }
 
 /* Cart badge below product name */
-.woocommerce-cart-form td.product-name .apwoo_cart-badge {
+.woocommerce-cart-form td.product-name .pcbw_cart-badge {
     margin-top: 5px;
 }
 
@@ -237,27 +237,27 @@
    BADGE COLOR VARIATIONS
    ========================================================================== */
 
-.apwoo_purchased-badge.apwoo_color-green {
+.pcbw_purchased-badge.pcbw_color-green {
     background-color: #28a745;
     color: #ffffff;
 }
 
-.apwoo_purchased-badge.apwoo_color-blue {
+.pcbw_purchased-badge.pcbw_color-blue {
     background-color: #007bff;
     color: #ffffff;
 }
 
-.apwoo_purchased-badge.apwoo_color-orange {
+.pcbw_purchased-badge.pcbw_color-orange {
     background-color: #ff9800;
     color: #ffffff;
 }
 
-.apwoo_purchased-badge.apwoo_color-red {
+.pcbw_purchased-badge.pcbw_color-red {
     background-color: #dc3545;
     color: #ffffff;
 }
 
-.apwoo_purchased-badge.apwoo_color-info {
+.pcbw_purchased-badge.pcbw_color-info {
     background-color: #17a2b8;
     color: #ffffff;
 }
@@ -267,52 +267,52 @@
    ========================================================================== */
 
 @media (max-width: 768px) {
-    .apwoo_purchased-badge {
+    .pcbw_purchased-badge {
         font-size: 11px;
         padding: 5px 10px;
     }
     
     /* Shop page responsive */
-    .apwoo_badge-overlay.apwoo_position-topleft {
+    .pcbw_badge-overlay.pcbw_position-topleft {
         top: 5px;
         left: 5px;
     }
     
-    .apwoo_badge-overlay.apwoo_position-topright {
+    .pcbw_badge-overlay.pcbw_position-topright {
         top: 5px;
         right: 5px;
     }
     
-    .apwoo_badge-overlay.apwoo_position-bottomleft {
+    .pcbw_badge-overlay.pcbw_position-bottomleft {
         bottom: 5px;
         left: 5px;
     }
     
-    .apwoo_badge-overlay.apwoo_position-bottomright {
+    .pcbw_badge-overlay.pcbw_position-bottomright {
         bottom: 5px;
         right: 5px;
     }
     
     /* Single product badge responsive */
-    .apwoo_badge-inline.apwoo_style-pill,
-    .apwoo_badge-inline.apwoo_style-rounded {
+    .pcbw_badge-inline.pcbw_style-pill,
+    .pcbw_badge-inline.pcbw_style-rounded {
         font-size: 12px;
         padding: 6px 14px;
     }
     
-    .apwoo_purchased-badge .apwoo_icon {
+    .pcbw_purchased-badge .pcbw_icon {
         width: 12px;
         height: 12px;
         margin-right: 4px;
     }
     
     /* Cart badge responsive */
-    .apwoo_cart-badge {
+    .pcbw_cart-badge {
         font-size: 10px;
         padding: 3px 6px;
     }
     
-    .apwoo_cart-badge .apwoo_icon {
+    .pcbw_cart-badge .pcbw_icon {
         width: 10px;
         height: 10px;
         margin-right: 3px;

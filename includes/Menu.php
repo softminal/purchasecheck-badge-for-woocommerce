@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes;
+namespace PurchaseCheck\Badge\Includes;
 
 if (!defined('ABSPATH')) {
     exit;

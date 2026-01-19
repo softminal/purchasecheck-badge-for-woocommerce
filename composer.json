@@ -1,19 +1,19 @@
 {
-    "name": "softminal/already-purchased-for-woo",
-    "description": "A plugin that adds a custom field to the product page to check if the customer has already purchased the product.",
+    "name": "purchasecheck/badge-woocommerce",
+    "description": "Display a Purchased badge on WooCommerce products that customers have already bought to prevent duplicate orders.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0+",
     "authors": [
         {
-            "name": "Softminal",
-            "email": "support@softminal.com",
-            "homepage": "https://softminal.com"
+            "name": "Dipto"
         }
     ],
     "autoload": {
         "psr-4": {
-            "WooAlreadyPurchased\\": "includes/"
+            "PurchaseCheck\\Badge\\": "includes/"
         }
     },
-    "require": {}
+    "require": {
+        "php": ">=7.4"
+    }
 }

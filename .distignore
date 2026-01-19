@@ -1,0 +1,90 @@
+# =============================================================================
+# PurchaseCheck Badge for WooCommerce - Distribution Ignore List
+# Files and folders to exclude from the WordPress.org distribution ZIP
+# =============================================================================
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Build tools & scripts
+build.sh
+build/
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+webpack.config.js
+gulpfile.js
+Gruntfile.js
+.babelrc
+.browserslistrc
+
+# Composer (keep vendor if needed for autoload)
+composer.lock
+
+# Testing
+tests/
+test/
+phpunit.xml
+phpunit.xml.dist
+.phpcs.xml
+.phpcs.xml.dist
+phpcs.xml
+phpcs.xml.dist
+
+# IDE & Editor
+.cursor/
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Linting & Formatting
+.eslintrc
+.eslintrc.js
+.eslintrc.json
+.prettierrc
+.prettierrc.js
+.prettierrc.json
+.editorconfig
+
+# Environment
+.env
+.env.local
+.env.development
+.env.production
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Maps
+*.log
+*.map
+
+# Documentation (keep readme.txt)
+*.md
+!readme.txt
+CHANGELOG
+CHANGELOG.md
+CONTRIBUTING
+CONTRIBUTING.md
+LICENSE
+
+# Source files (if using build process)
+*.scss
+*.sass
+*.less
+src/
+assets/src/
+
+# Existing archives
+*.zip
+*.tar.gz
+*.rar
+
+# This file itself
+.distignore

@@ -1,16 +1,14 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes\Services;
+namespace PurchaseCheck\Badge\Includes\Services;
 /**
  * Database class for handling database operations.
  *
  * This class is responsible for managing the database operations related to the plugin.
  * It includes methods for activating, deactivating, and uninstalling the plugin.
  *
- * @package WooAlreadyPurchased\Includes\Services
+ * @package PurchaseCheck\Badge\Includes\Services
  */
-// This file is part of the Already Purchased for WooCommerce plugin for WordPress.
-// It is subject to the terms and conditions defined in the file 'LICENSE.txt', which is part of this source code package.
 if (!defined('ABSPATH')) {
     exit;
 }

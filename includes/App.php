@@ -1,22 +1,22 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes;
+namespace PurchaseCheck\Badge\Includes;
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-use WooAlreadyPurchased\Includes\Enqueue;
-use WooAlreadyPurchased\Includes\Menu;
-use WooAlreadyPurchased\Includes\Settings\SettingsManager;
-use WooAlreadyPurchased\Includes\Badges\ShopBadge;
-use WooAlreadyPurchased\Includes\Badges\ProductBadge;
-use WooAlreadyPurchased\Includes\Badges\CartBadge;
+use PurchaseCheck\Badge\Includes\Enqueue;
+use PurchaseCheck\Badge\Includes\Menu;
+use PurchaseCheck\Badge\Includes\Settings\SettingsManager;
+use PurchaseCheck\Badge\Includes\Badges\ShopBadge;
+use PurchaseCheck\Badge\Includes\Badges\ProductBadge;
+use PurchaseCheck\Badge\Includes\Badges\CartBadge;
 use Exception;
 
 /**
  * Class App
- * @package WooAlreadyPurchased\Includes
+ * @package PurchaseCheck\Badge\Includes
  *
  * This class is responsible for loading all the necessary components of the plugin.
  */
@@ -84,7 +84,7 @@ class App
         ];
 
         foreach ($requiredFiles as $file) {
-            $filePath = WOO_ALREADY_PURCHASED_DIR . $file;
+            $filePath = PCBW_DIR . $file;
             if (!file_exists($filePath)) {
                 throw new Exception( esc_html( "Required file not found: {$file}" ) );
             }

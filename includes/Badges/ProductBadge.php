@@ -1,8 +1,8 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes\Badges;
+namespace PurchaseCheck\Badge\Includes\Badges;
 
-use WooAlreadyPurchased\Includes\Settings\ProductPageSettings;
+use PurchaseCheck\Badge\Includes\Settings\ProductPageSettings;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -106,20 +106,20 @@ class ProductBadge extends BaseBadge
         $show_icon = ProductPageSettings::showIcon();
 
         $classes = [
-            'apwoo_purchased-badge',
-            'apwoo_badge-inline',
-            'apwoo_product-badge',
-            'apwoo_product-position-' . esc_attr($position),
+            'pcbw_purchased-badge',
+            'pcbw_badge-inline',
+            'pcbw_product-badge',
+            'pcbw_product-position-' . esc_attr($position),
         ];
 
         // Add style class
         if ($style !== 'default') {
-            $classes[] = 'apwoo_style-' . esc_attr($style);
+            $classes[] = 'pcbw_style-' . esc_attr($style);
         }
 
         // Add icon class if enabled
         if ($show_icon) {
-            $classes[] = 'apwoo_has-icon';
+            $classes[] = 'pcbw_has-icon';
         }
 
         // Build badge content

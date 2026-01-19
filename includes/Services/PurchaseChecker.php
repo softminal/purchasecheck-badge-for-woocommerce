@@ -1,8 +1,8 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes\Services;
+namespace PurchaseCheck\Badge\Includes\Services;
 
-use WooAlreadyPurchased\Includes\Settings\GeneralSettings;
+use PurchaseCheck\Badge\Includes\Settings\GeneralSettings;
 
 if (!defined('ABSPATH')) {
     exit;

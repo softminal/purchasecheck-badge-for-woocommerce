@@ -5,15 +5,15 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin Basic Information
-define('WOO_ALREADY_PURCHASED_VERSION', '1.0.0');
-define('WOO_ALREADY_PURCHASED_DIR', plugin_dir_path(dirname(__FILE__)));
-define('WOO_ALREADY_PURCHASED_URL', plugin_dir_url(dirname(__FILE__)));
-define('WOO_ALREADY_PURCHASED_PLUGIN_BASE', plugin_basename(dirname(__FILE__)));
-define('WOO_ALREADY_PURCHASED_PLUGIN_NAME', 'already-purchased-for-woo');
+define('PCBW_VERSION', '1.0.0');
+define('PCBW_DIR', plugin_dir_path(dirname(__FILE__)));
+define('PCBW_URL', plugin_dir_url(dirname(__FILE__)));
+define('PCBW_PLUGIN_BASE', plugin_basename(dirname(__FILE__)));
+define('PCBW_PLUGIN_NAME', 'purchasecheck-badge-for-woocommerce');
 
 // Database Tables
-define('WOO_ALREADY_PURCHASED_TABLE_PREFIX', 'ap_woo_');
+define('PCBW_TABLE_PREFIX', 'pcbw_');
 
 // API Information
-define('WOO_ALREADY_PURCHASED_API_VERSION', 'v1');
-define('WOO_ALREADY_PURCHASED_API_NAMESPACE', 'already-purchased-for-woo/' . WOO_ALREADY_PURCHASED_API_VERSION);
+define('PCBW_API_VERSION', 'v1');
+define('PCBW_API_NAMESPACE', 'purchasecheck-badge/' . PCBW_API_VERSION);

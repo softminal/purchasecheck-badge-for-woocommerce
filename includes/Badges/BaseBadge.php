@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes\Badges;
+namespace PurchaseCheck\Badge\Includes\Badges;
 
-use WooAlreadyPurchased\Includes\Services\PurchaseChecker;
-use WooAlreadyPurchased\Includes\Settings\GeneralSettings;
+use PurchaseCheck\Badge\Includes\Services\PurchaseChecker;
+use PurchaseCheck\Badge\Includes\Settings\GeneralSettings;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -97,7 +97,7 @@ abstract class BaseBadge
     protected function getCheckmarkIcon($width = 14, $height = 14)
     {
         return sprintf(
-            '<svg class="apwoo_icon" width="%d" height="%d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>',
+            '<svg class="pcbw_icon" width="%d" height="%d" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>',
             absint($width),
             absint($height)
         );

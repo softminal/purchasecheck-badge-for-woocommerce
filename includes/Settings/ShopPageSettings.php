@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes\Settings;
+namespace PurchaseCheck\Badge\Includes\Settings;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -16,7 +16,7 @@ class ShopPageSettings
     /**
      * Section prefix
      */
-    const PREFIX = 'apwoo_shop_';
+    const PREFIX = 'pcbw_shop_';
 
     /**
      * Get settings fields
@@ -28,47 +28,47 @@ class ShopPageSettings
         return [
             // Display Settings
             [
-                'title' => __('Shop Page Display Settings', 'already-purchased-for-woo'),
+                'title' => __('Shop Page Display Settings', 'purchasecheck-badge-for-woocommerce'),
                 'type' => 'title',
-                'desc' => __('Configure badge display on shop and category pages.', 'already-purchased-for-woo'),
+                'desc' => __('Configure badge display on shop and category pages.', 'purchasecheck-badge-for-woocommerce'),
                 'id' => self::PREFIX . 'display_title'
             ],
             [
-                'title' => __('Enable on Shop Page', 'already-purchased-for-woo'),
-                'desc' => __('Display badge on shop/archive pages', 'already-purchased-for-woo'),
-                'id' => 'apwoo_show_shop',
+                'title' => __('Enable on Shop Page', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Display badge on shop/archive pages', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_show_shop',
                 'default' => 'yes',
                 'type' => 'checkbox'
             ],
             [
-                'title' => __('Enable on Category Pages', 'already-purchased-for-woo'),
-                'desc' => __('Display badge on product category pages', 'already-purchased-for-woo'),
-                'id' => 'apwoo_show_category',
+                'title' => __('Enable on Category Pages', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Display badge on product category pages', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_show_category',
                 'default' => 'yes',
                 'type' => 'checkbox'
             ],
             [
-                'title' => __('Badge Text', 'already-purchased-for-woo'),
-                'desc' => __('Text to display on the badge (shop pages)', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_text',
-                'default' => __('Purchased', 'already-purchased-for-woo'),
+                'title' => __('Badge Text', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Text to display on the badge (shop pages)', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_text',
+                'default' => __('Purchased', 'purchasecheck-badge-for-woocommerce'),
                 'type' => 'text',
                 'css' => 'min-width:300px;'
             ],
             [
-                'title' => __('Badge Position', 'already-purchased-for-woo'),
-                'desc' => __('Choose where to display the badge on shop/category pages', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_position',
+                'title' => __('Badge Position', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Choose where to display the badge on shop/category pages', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_position',
                 'default' => 'topleft',
                 'type' => 'select',
                 'class' => 'wc-enhanced-select',
                 'css' => 'min-width:300px;',
                 'options' => [
-                    'topleft' => __('Top Left', 'already-purchased-for-woo'),
-                    'topright' => __('Top Right', 'already-purchased-for-woo'),
-                    'bottomleft' => __('Bottom Left', 'already-purchased-for-woo'),
-                    'bottomright' => __('Bottom Right', 'already-purchased-for-woo'),
-                    'center' => __('Center', 'already-purchased-for-woo'),
+                    'topleft' => __('Top Left', 'purchasecheck-badge-for-woocommerce'),
+                    'topright' => __('Top Right', 'purchasecheck-badge-for-woocommerce'),
+                    'bottomleft' => __('Bottom Left', 'purchasecheck-badge-for-woocommerce'),
+                    'bottomright' => __('Bottom Right', 'purchasecheck-badge-for-woocommerce'),
+                    'center' => __('Center', 'purchasecheck-badge-for-woocommerce'),
                 ]
             ],
             [
@@ -77,33 +77,33 @@ class ShopPageSettings
             ],
             // Design Settings
             [
-                'title' => __('Shop Page Badge Design', 'already-purchased-for-woo'),
+                'title' => __('Shop Page Badge Design', 'purchasecheck-badge-for-woocommerce'),
                 'type' => 'title',
-                'desc' => __('Customize the appearance of the badge on shop pages.', 'already-purchased-for-woo'),
+                'desc' => __('Customize the appearance of the badge on shop pages.', 'purchasecheck-badge-for-woocommerce'),
                 'id' => self::PREFIX . 'design_title'
             ],
             [
-                'title' => __('Background Color', 'already-purchased-for-woo'),
-                'desc' => __('Badge background color (e.g., #28a745 or rgba(40, 167, 69, 0.9))', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_bg_color',
+                'title' => __('Background Color', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Badge background color (e.g., #28a745 or rgba(40, 167, 69, 0.9))', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_bg_color',
                 'default' => '#28a745',
                 'type' => 'text',
                 'css' => 'min-width:200px;',
                 'placeholder' => '#28a745'
             ],
             [
-                'title' => __('Text Color', 'already-purchased-for-woo'),
-                'desc' => __('Badge text color (e.g., #ffffff)', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_text_color',
+                'title' => __('Text Color', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Badge text color (e.g., #ffffff)', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_text_color',
                 'default' => '#ffffff',
                 'type' => 'text',
                 'css' => 'min-width:200px;',
                 'placeholder' => '#ffffff'
             ],
             [
-                'title' => __('Font Size', 'already-purchased-for-woo'),
-                'desc' => __('Badge font size in pixels', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_font_size',
+                'title' => __('Font Size', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Badge font size in pixels', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_font_size',
                 'default' => '12',
                 'type' => 'number',
                 'css' => 'width:100px;',
@@ -113,18 +113,18 @@ class ShopPageSettings
                 ]
             ],
             [
-                'title' => __('Padding', 'already-purchased-for-woo'),
-                'desc' => __('Badge padding in pixels (vertical horizontal, e.g., 6 12)', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_padding',
+                'title' => __('Padding', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Badge padding in pixels (vertical horizontal, e.g., 6 12)', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_padding',
                 'default' => '6 12',
                 'type' => 'text',
                 'css' => 'min-width:150px;',
                 'placeholder' => '6 12'
             ],
             [
-                'title' => __('Border Width', 'already-purchased-for-woo'),
-                'desc' => __('Badge border width in pixels (0 to disable)', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_border_width',
+                'title' => __('Border Width', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Badge border width in pixels (0 to disable)', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_border_width',
                 'default' => '0',
                 'type' => 'number',
                 'css' => 'width:100px;',
@@ -134,18 +134,18 @@ class ShopPageSettings
                 ]
             ],
             [
-                'title' => __('Border Color', 'already-purchased-for-woo'),
-                'desc' => __('Badge border color (e.g., #ffffff)', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_border_color',
+                'title' => __('Border Color', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Badge border color (e.g., #ffffff)', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_border_color',
                 'default' => '#ffffff',
                 'type' => 'text',
                 'css' => 'min-width:200px;',
                 'placeholder' => '#ffffff'
             ],
             [
-                'title' => __('Border Radius', 'already-purchased-for-woo'),
-                'desc' => __('Badge border radius in pixels', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_border_radius',
+                'title' => __('Border Radius', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Badge border radius in pixels', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_border_radius',
                 'default' => '3',
                 'type' => 'number',
                 'css' => 'width:100px;',
@@ -155,16 +155,16 @@ class ShopPageSettings
                 ]
             ],
             [
-                'title' => __('Blur Background', 'already-purchased-for-woo'),
-                'desc' => __('Enable blur/glass effect on badge background', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_blur_bg',
+                'title' => __('Blur Background', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Enable blur/glass effect on badge background', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_blur_bg',
                 'default' => 'no',
                 'type' => 'checkbox'
             ],
             [
-                'title' => __('Blur Amount', 'already-purchased-for-woo'),
-                'desc' => __('Blur intensity in pixels (only applies if blur background is enabled)', 'already-purchased-for-woo'),
-                'id' => 'apwoo_shop_badge_blur_amount',
+                'title' => __('Blur Amount', 'purchasecheck-badge-for-woocommerce'),
+                'desc' => __('Blur intensity in pixels (only applies if blur background is enabled)', 'purchasecheck-badge-for-woocommerce'),
+                'id' => 'pcbw_shop_badge_blur_amount',
                 'default' => '10',
                 'type' => 'number',
                 'css' => 'width:100px;',
@@ -191,7 +191,7 @@ class ShopPageSettings
      */
     public static function showOnShop()
     {
-        return SettingsManager::get('apwoo_show_shop', true);
+        return SettingsManager::get('pcbw_show_shop', true);
     }
 
     /**
@@ -201,7 +201,7 @@ class ShopPageSettings
      */
     public static function showOnCategory()
     {
-        return SettingsManager::get('apwoo_show_category', true);
+        return SettingsManager::get('pcbw_show_category', true);
     }
 
     /**
@@ -211,7 +211,7 @@ class ShopPageSettings
      */
     public static function getBadgeText()
     {
-        return SettingsManager::get('apwoo_shop_badge_text', __('Purchased', 'already-purchased-for-woo'));
+        return SettingsManager::get('pcbw_shop_badge_text', __('Purchased', 'purchasecheck-badge-for-woocommerce'));
     }
 
     /**
@@ -221,7 +221,7 @@ class ShopPageSettings
      */
     public static function getBadgePosition()
     {
-        return SettingsManager::get('apwoo_shop_badge_position', 'topleft');
+        return SettingsManager::get('pcbw_shop_badge_position', 'topleft');
     }
 
     /**
@@ -231,7 +231,7 @@ class ShopPageSettings
      */
     public static function getBgColor()
     {
-        return SettingsManager::get('apwoo_shop_badge_bg_color', '#28a745');
+        return SettingsManager::get('pcbw_shop_badge_bg_color', '#28a745');
     }
 
     /**
@@ -241,7 +241,7 @@ class ShopPageSettings
      */
     public static function getTextColor()
     {
-        return SettingsManager::get('apwoo_shop_badge_text_color', '#ffffff');
+        return SettingsManager::get('pcbw_shop_badge_text_color', '#ffffff');
     }
 
     /**
@@ -251,7 +251,7 @@ class ShopPageSettings
      */
     public static function getFontSize()
     {
-        return (int) SettingsManager::get('apwoo_shop_badge_font_size', 12);
+        return (int) SettingsManager::get('pcbw_shop_badge_font_size', 12);
     }
 
     /**
@@ -261,7 +261,7 @@ class ShopPageSettings
      */
     public static function getPadding()
     {
-        return SettingsManager::get('apwoo_shop_badge_padding', '6 12');
+        return SettingsManager::get('pcbw_shop_badge_padding', '6 12');
     }
 
     /**
@@ -271,7 +271,7 @@ class ShopPageSettings
      */
     public static function getBorderWidth()
     {
-        return (int) SettingsManager::get('apwoo_shop_badge_border_width', 0);
+        return (int) SettingsManager::get('pcbw_shop_badge_border_width', 0);
     }
 
     /**
@@ -281,7 +281,7 @@ class ShopPageSettings
      */
     public static function getBorderColor()
     {
-        return SettingsManager::get('apwoo_shop_badge_border_color', '#ffffff');
+        return SettingsManager::get('pcbw_shop_badge_border_color', '#ffffff');
     }
 
     /**
@@ -291,7 +291,7 @@ class ShopPageSettings
      */
     public static function getBorderRadius()
     {
-        return (int) SettingsManager::get('apwoo_shop_badge_border_radius', 3);
+        return (int) SettingsManager::get('pcbw_shop_badge_border_radius', 3);
     }
 
     /**
@@ -301,7 +301,7 @@ class ShopPageSettings
      */
     public static function isBlurBgEnabled()
     {
-        return SettingsManager::get('apwoo_shop_badge_blur_bg', false);
+        return SettingsManager::get('pcbw_shop_badge_blur_bg', false);
     }
 
     /**
@@ -311,6 +311,6 @@ class ShopPageSettings
      */
     public static function getBlurAmount()
     {
-        return (int) SettingsManager::get('apwoo_shop_badge_blur_amount', 10);
+        return (int) SettingsManager::get('pcbw_shop_badge_blur_amount', 10);
     }
 }

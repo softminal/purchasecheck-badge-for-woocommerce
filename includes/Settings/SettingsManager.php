@@ -1,6 +1,6 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes\Settings;
+namespace PurchaseCheck\Badge\Includes\Settings;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -10,14 +10,14 @@ if (!defined('ABSPATH')) {
  * Settings Manager
  * 
  * Main settings handler that coordinates all setting tabs.
-* Adds settings under WooCommerce → Settings → Already Purchased for WooCommerce
+ * Adds settings under WooCommerce → Settings → Purchased Badge
  */
 class SettingsManager
 {
     /**
      * Tab ID
      */
-    const TAB_ID = 'apwoo';
+    const TAB_ID = 'pcbw_settings';
 
     /**
      * Settings instances
@@ -64,10 +64,10 @@ class SettingsManager
     public function getSections()
     {
         return [
-            '' => __('General', 'already-purchased-for-woo'),
-            'shop_page' => __('Shop Page', 'already-purchased-for-woo'),
-            'product_page' => __('Product Page', 'already-purchased-for-woo'),
-            'cart' => __('Cart', 'already-purchased-for-woo'),
+            '' => __('General', 'purchasecheck-badge-for-woocommerce'),
+            'shop_page' => __('Shop Page', 'purchasecheck-badge-for-woocommerce'),
+            'product_page' => __('Product Page', 'purchasecheck-badge-for-woocommerce'),
+            'cart' => __('Cart', 'purchasecheck-badge-for-woocommerce'),
         ];
     }
 
@@ -111,7 +111,7 @@ class SettingsManager
             $tabs = [];
         }
         
-        $tabs[self::TAB_ID] = __('APWoo', 'already-purchased-for-woo');
+        $tabs[self::TAB_ID] = __('Purchased Badge', 'purchasecheck-badge-for-woocommerce');
         
         return $tabs;
     }

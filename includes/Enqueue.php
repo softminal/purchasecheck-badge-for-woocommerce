@@ -1,11 +1,11 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes;
+namespace PurchaseCheck\Badge\Includes;
 
-use WooAlreadyPurchased\Includes\Settings\GeneralSettings;
-use WooAlreadyPurchased\Includes\Settings\ShopPageSettings;
-use WooAlreadyPurchased\Includes\Settings\ProductPageSettings;
-use WooAlreadyPurchased\Includes\Settings\CartSettings;
+use PurchaseCheck\Badge\Includes\Settings\GeneralSettings;
+use PurchaseCheck\Badge\Includes\Settings\ShopPageSettings;
+use PurchaseCheck\Badge\Includes\Settings\ProductPageSettings;
+use PurchaseCheck\Badge\Includes\Settings\CartSettings;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -48,10 +48,10 @@ class Enqueue
 
         // Enqueue CSS for badge styling
         wp_enqueue_style(
-            'already-purchased-for-woo-badge-style',
-            WOO_ALREADY_PURCHASED_URL . 'assets/css/badge.css',
+            'purchasecheck-badge-style',
+            PCBW_URL . 'assets/css/badge.css',
             [],
-            WOO_ALREADY_PURCHASED_VERSION
+            PCBW_VERSION
         );
 
         // Add inline dynamic CSS based on settings
@@ -75,7 +75,7 @@ class Enqueue
         $css .= $this->getCartBadgeCss();
 
         // Output CSS
-        echo '<style id="apwoo-dynamic-badge-css">' . esc_attr($css) . '</style>' . "\n";
+        echo '<style id="pcbw-dynamic-badge-css">' . esc_attr($css) . '</style>' . "\n";
     }
 
     /**
@@ -85,7 +85,7 @@ class Enqueue
      */
     private function getShopBadgeCss()
     {
-        return $this->buildBadgeCss('.apwoo_shop-badge', [
+        return $this->buildBadgeCss('.pcbw_shop-badge', [
             'bg_color' => ShopPageSettings::getBgColor(),
             'text_color' => ShopPageSettings::getTextColor(),
             'border_width' => ShopPageSettings::getBorderWidth(),
@@ -105,7 +105,7 @@ class Enqueue
      */
     private function getProductBadgeCss()
     {
-        return $this->buildBadgeCss('.apwoo_product-badge', [
+        return $this->buildBadgeCss('.pcbw_product-badge', [
             'bg_color' => ProductPageSettings::getBgColor(),
             'text_color' => ProductPageSettings::getTextColor(),
             'border_width' => ProductPageSettings::getBorderWidth(),
@@ -125,7 +125,7 @@ class Enqueue
      */
     private function getCartBadgeCss()
     {
-        return $this->buildBadgeCss('.apwoo_cart-badge', [
+        return $this->buildBadgeCss('.pcbw_cart-badge', [
             'bg_color' => CartSettings::getBgColor(),
             'text_color' => CartSettings::getTextColor(),
             'border_width' => CartSettings::getBorderWidth(),

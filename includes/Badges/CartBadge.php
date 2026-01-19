@@ -1,8 +1,8 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes\Badges;
+namespace PurchaseCheck\Badge\Includes\Badges;
 
-use WooAlreadyPurchased\Includes\Settings\CartSettings;
+use PurchaseCheck\Badge\Includes\Settings\CartSettings;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -105,13 +105,13 @@ class CartBadge extends BaseBadge
         $show_icon = CartSettings::showIcon();
 
         $classes = [
-            'apwoo_purchased-badge',
-            'apwoo_badge-inline',
-            'apwoo_cart-badge',
+            'pcbw_purchased-badge',
+            'pcbw_badge-inline',
+            'pcbw_cart-badge',
         ];
 
         if ($show_icon) {
-            $classes[] = 'apwoo_has-icon';
+            $classes[] = 'pcbw_has-icon';
         }
 
         // Build badge content

@@ -22,8 +22,9 @@ Thumbs.db
 .idea/
 
 # Build artifacts
+build/
 *.map
 
 # WordPress-specific files
 wp-content/debug.log
-already-purchased-for-woo.zip
+purchasecheck-badge-woocommerce.zip

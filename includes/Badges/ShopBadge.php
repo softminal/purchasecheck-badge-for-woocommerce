@@ -1,9 +1,9 @@
 <?php
 
-namespace WooAlreadyPurchased\Includes\Badges;
+namespace PurchaseCheck\Badge\Includes\Badges;
 
-use WooAlreadyPurchased\Includes\Settings\ShopPageSettings;
-use WooAlreadyPurchased\Includes\Services\PurchaseChecker;
+use PurchaseCheck\Badge\Includes\Settings\ShopPageSettings;
+use PurchaseCheck\Badge\Includes\Services\PurchaseChecker;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -98,7 +98,7 @@ class ShopBadge extends BaseBadge
             return;
         }
 
-        echo esc_html($this->getBadgeHtml());
+        echo wp_kses_post($this->getBadgeHtml());
     }
 
     /**
@@ -144,7 +144,7 @@ class ShopBadge extends BaseBadge
         $badge_html = $this->getBadgeHtml();
 
         // Wrap image in a container with the badge
-        return '<div class="apwoo_product-image-wrapper" style="position: relative; display: block;">' . $image . $badge_html . '</div>';
+        return '<div class="pcbw_product-image-wrapper" style="position: relative; display: block;">' . $image . $badge_html . '</div>';
     }
 
     /**
@@ -156,12 +156,12 @@ class ShopBadge extends BaseBadge
     {
         $badge_text = $this->getBadgeText();
         $position = ShopPageSettings::getBadgePosition();
-        $position_class = 'apwoo_position-' . esc_attr($position);
+        $position_class = 'pcbw_position-' . esc_attr($position);
         
         return sprintf(
-            '<span class="apwoo_purchased-badge apwoo_badge-overlay apwoo_shop-badge %s">%s</span>',
+            '<span class="pcbw_purchased-badge pcbw_badge-overlay pcbw_shop-badge %s">%s</span>',
             esc_attr($position_class),
-            $badge_text
+            esc_html($badge_text)
         );
     }
 }
