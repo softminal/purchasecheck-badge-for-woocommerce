@@ -1,6 +1,6 @@
-# Already Purchased for Woo
+# PurchaseCheck Badge for WooCommerce
 
-**Contributors:** softminal, diptosoftminal
+**Contributors:** softminal, diptosoftminal  
 **Tags:** woocommerce, purchased, badge, customer, orders  
 **Requires at least:** 5.0  
 **Tested up to:** 6.9  
@@ -13,28 +13,30 @@ Display a "Purchased" badge on WooCommerce products customers have already bough
 
 ## Description
 
-Already Purchased for Woo is a lightweight WordPress plugin that enhances your WooCommerce store by displaying a customizable badge on products that logged-in customers have already purchased. This helps customers quickly identify products they own, reducing duplicate purchases and improving user experience.
+PurchaseCheck Badge for WooCommerce is a lightweight WordPress plugin that enhances your WooCommerce store by displaying a customizable badge on products that logged-in customers have already purchased. This helps customers quickly identify products they own, reducing duplicate purchases and improving user experience.
 
 ### Key Features
 
-* **Smart Purchase Detection**: Automatically detects if a customer has purchased a product based on configurable order statuses
-* **Flexible Display Options**: Show badges on shop pages, category pages, and single product pages
-* **Customizable Badge Text**: Change the badge text to match your brand
-* **Order Status Control**: Choose which order statuses count as "purchased" (completed, processing, etc.)
-* **Performance Optimized**: Uses efficient caching to minimize database queries
-* **Variation Support**: Handles product variations correctly, marking parent products as purchased when any variation is bought
-* **WooCommerce Integration**: Seamlessly integrates with WooCommerce settings panel
+- **Smart Purchase Detection**: Automatically detects if a customer has purchased a product based on configurable order statuses
+- **Flexible Display Options**: Show badges on shop pages, category pages, and single product pages
+- **Customizable Badge Text**: Change the badge text to match your brand
+- **Order Status Control**: Choose which order statuses count as "purchased" (completed, processing, etc.)
+- **Performance Optimized**: Uses efficient caching to minimize database queries
+- **Variation Support**: Handles product variations correctly, marking parent products as purchased when any variation is bought
+- **WooCommerce Integration**: Seamlessly integrates with WooCommerce settings panel
 
-### How It Works
+## How It Works
 
 The plugin checks a logged-in customer's order history and displays a badge on products they've previously purchased. The badge appears:
+
 - On shop/archive pages as an overlay on product images
 - On category pages as an overlay on product images
 - On single product pages inline with the product title
 
-### Settings
+## Settings
 
-Configure the plugin through **WooCommerce → Settings → APWoo**:
+Configure the plugin through **WooCommerce → Settings → Purchased Badge**:
+
 - Enable/disable the badge feature
 - Customize badge text
 - Select which order statuses count as purchased
@@ -46,7 +48,7 @@ Configure the plugin through **WooCommerce → Settings → APWoo**:
 
 1. Log in to your WordPress admin panel
 2. Navigate to **Plugins → Add New**
-3. Search for "Already Purchased for WooCommerce"
+3. Search for "PurchaseCheck Badge for WooCommerce"
 4. Click **Install Now** and then **Activate**
 
 ### Manual Installation
@@ -58,23 +60,24 @@ Configure the plugin through **WooCommerce → Settings → APWoo**:
 5. Choose the zip file and click **Install Now**
 6. Click **Activate Plugin**
 
-
 ## Configuration
 
 After activation, configure the plugin:
 
-1. Go to **WooCommerce → Settings → APWoo**
+1. Go to **WooCommerce → Settings → Purchased Badge**
 2. Configure the following options:
 
-   **Purchased Badge Settings:**
-   - **Enable Badge**: Toggle the badge feature on/off
-   - **Badge Text**: Customize the text displayed on the badge (default: "Purchased")
-   - **Order Statuses**: Select which order statuses count as purchased (default: Completed, Processing)
+**Purchased Badge Settings:**
 
-   **Display Settings:**
-   - **Show on Shop Page**: Display badges on shop/archive pages
-   - **Show on Category Pages**: Display badges on product category pages
-   - **Show on Product Page**: Display badges on single product pages
+- **Enable Badge**: Toggle the badge feature on/off
+- **Badge Text**: Customize the text displayed on the badge (default: "Purchased")
+- **Order Statuses**: Select which order statuses count as purchased (default: Completed, Processing)
+
+**Display Settings:**
+
+- **Show on Shop Page**: Display badges on shop/archive pages
+- **Show on Category Pages**: Display badges on product category pages
+- **Show on Product Page**: Display badges on single product pages
 
 3. Click **Save changes**
 
@@ -86,7 +89,7 @@ Yes! If a customer purchases any variation of a variable product, both the varia
 
 ### Which order statuses should I select?
 
-Typically, you'll want to select "Completed" and "Processing" statuses. However, you can customize this based on your business needs. For example, if you want to show badges only for fully completed orders, select only "Completed".
+Typically, you'll want to select "Completed" and "Processing" statuses. However, you can customize this based on your business needs.
 
 ### Will the badge show for guest users?
 
@@ -100,49 +103,38 @@ The plugin is optimized for performance using caching. Purchase data is cached p
 
 The plugin automatically clears the cache when order statuses change, ensuring badges are always up-to-date.
 
-## Customization
-
-### Styling the Badge
-
-You can customize the badge appearance by adding CSS to your theme. Here's an example:
-
-
 ## Requirements
 
-* WordPress 5.0 or higher
-* WooCommerce 3.0 or higher
-* PHP 7.4 or higher
-
-## Screenshots
-
-1. Badge displayed on shop page
-2. Badge displayed on product page
-3. Plugin settings page
+- WordPress 5.0 or higher
+- WooCommerce 3.0 or higher
+- PHP 7.4 or higher
 
 ## Changelog
 
 ### 1.0.0
-* Initial release
-* Badge display on shop, category, and product pages
-* Configurable badge text and order statuses
-* Display location controls
-* Performance optimization with caching
-* Support for product variations
 
+- Initial release
+- Badge display on shop, category, and product pages
+- Configurable badge text and order statuses
+- Display location controls
+- Performance optimization with caching
+- Support for product variations
+
+## Upgrade Notice
+
+### 1.0.0
+
+Initial release.
 
 ## Credits
 
-Developed by [Softminal LLC](https://softminal.com/)
+Developed by [Softminal](https://github.com/softminal)
+
+### Links
+
+- [GitHub Repository](https://github.com/softminal/purchasecheck-badge-for-woocommerce)
+- [Report Issues](https://github.com/softminal/purchasecheck-badge-for-woocommerce/issues)
 
 ## License
 
 This plugin is licensed under the GPL-2.0+ license.
-
-== Upgrade Notice ==
-
-= 1.0.0 =
-Initial release.
-
----
-
-**Note**: This plugin requires WooCommerce to be installed and activated. The badge feature only works for logged-in users.
