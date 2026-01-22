@@ -1,14 +1,5 @@
 # Woo Already Purchased
 
-**Contributors:** Softminal LLC  
-**Tags:** woocommerce, purchased, badge, customer, orders  
-**Requires at least:** 5.0  
-**Tested up to:** 6.9  
-**Requires PHP:** 7.4  
-**Stable tag:** 1.0.0  
-**License:** GPL-2.0+  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.txt
-
 Display a "Purchased" badge on products that customers have already bought, helping them identify items they own and improving their shopping experience.
 
 ## Description
